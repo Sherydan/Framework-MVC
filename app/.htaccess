@@ -1,0 +1,2 @@
+# Opcion para que no se pueda acceder a /app
+Options -Indexes

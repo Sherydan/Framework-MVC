@@ -1,0 +1,14 @@
+#evitar que se muestre un mensaje de error al llamar ficheros que no existen
+#redireccionar todo a travez de index.php
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+  RewriteBase /advanced_php_tutorial/luis_mvc/public
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # regla para no tener que usar el formato mipagina/index.php?param=test
+  # en vez de eso, se sobreescrbe como mipagina/test
+  # tambien se le puede dar varios parametros (mipagina/post/id/test)
+  # y se obtiene "post/id/test" al tomar la url en el core
+  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>

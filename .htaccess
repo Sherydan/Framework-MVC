@@ -1,0 +1,6 @@
+# evitar que se muestren las carpetas al intentar entrar al directorio raiz
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
+</IfModule>
