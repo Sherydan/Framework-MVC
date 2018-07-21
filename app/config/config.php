@@ -19,6 +19,9 @@
     # Nombre del sitio
     define('SITENAME', 'Luis MVC');
 
+    # Version
+    define('APPVERSION', '1.0.0');
+
 
     
 ?>
